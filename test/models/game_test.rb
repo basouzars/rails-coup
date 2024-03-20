@@ -1,0 +1,27 @@
+# frozen_string_literal: true
+
+# == Schema Information
+#
+# Table name: games
+#
+#  id         :uuid             not null, primary key
+#  status     :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  winner_id  :uuid
+#
+# Indexes
+#
+#  index_games_on_winner_id  (winner_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (winner_id => players.id)
+#
+require 'test_helper'
+
+class GameTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end

@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: cards
+#
+#  id         :uuid             not null, primary key
+#  type       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  game_id    :uuid
+#  player_id  :uuid
+#
+# Indexes
+#
+#  index_cards_on_game_id    (game_id)
+#  index_cards_on_player_id  (player_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (game_id => games.id)
+#  fk_rails_...  (player_id => players.id)
+#
+
+one:
+  type: 
+  game_id: 1
+  player_id: 1
+  in_deck: false
+
+two:
+  type: 
+  game_id: 1
+  player_id: 1
+  in_deck: false

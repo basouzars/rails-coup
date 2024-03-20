@@ -1,0 +1,39 @@
+# == Schema Information
+#
+# Table name: actions
+#
+#  id               :uuid             not null, primary key
+#  success          :boolean
+#  type             :string
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  game_id          :uuid
+#  player_id        :uuid
+#  target_player_id :uuid
+#
+# Indexes
+#
+#  index_actions_on_game_id           (game_id)
+#  index_actions_on_player_id         (player_id)
+#  index_actions_on_target_player_id  (target_player_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (game_id => games.id)
+#  fk_rails_...  (player_id => players.id)
+#  fk_rails_...  (target_player_id => players.id)
+#
+
+one:
+  game_id: 1
+  player_id: 1
+  type: 
+  target_player_id: 1
+  success: false
+
+two:
+  game_id: 1
+  player_id: 1
+  type: 
+  target_player_id: 1
+  success: false
